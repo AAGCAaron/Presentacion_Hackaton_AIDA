@@ -497,7 +497,7 @@
             align-items: center;
             transition: background 0.2s;
         }
-        
+
         .modal-close:hover {
             background: var(--coral);
             color: white;
@@ -590,16 +590,29 @@
 
                 <div class="stats-grid reveal delay-3" style="margin-top: 40px;">
                     <div class="stat-card">
-                        <div class="stat-number" style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; font-size: 2.5rem;" onclick="showChart('inegi')" title="Haz clic para ver gráfica">Actividad Física <span style="font-size: 1.5rem; opacity: 0.5;">📊</span></div>
-                        <div class="stat-text">≈ 60% de los mexicanos NO realiza actividad física suficiente (Fuente: INEGI)</div>
+                        <div class="stat-number"
+                            style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; font-size: 2.5rem;"
+                            onclick="showChart('inegi')" title="Haz clic para ver gráfica">Actividad Física <span
+                                style="font-size: 1.5rem; opacity: 0.5;">📊</span></div>
+                        <div class="stat-text">≈ 60% de los mexicanos NO realiza actividad física suficiente (Fuente:
+                            INEGI)</div>
                     </div>
                     <div class="stat-card" style="border-color: var(--magenta);">
-                        <div class="stat-number" style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; font-size: 2.5rem;" onclick="showChart('ensanut')" title="Haz clic para ver gráfica">Sobrepeso <span style="font-size: 1.5rem; opacity: 0.5;">📊</span></div>
-                        <div class="stat-text">Más del 70% de adultos en México tienen sobrepeso u obesidad (Fuente: ENSANUT)</div>
+                        <div class="stat-number"
+                            style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; font-size: 2.5rem;"
+                            onclick="showChart('ensanut')" title="Haz clic para ver gráfica">Sobrepeso <span
+                                style="font-size: 1.5rem; opacity: 0.5;">📊</span></div>
+                        <div class="stat-text">Más del 70% de adultos en México tienen sobrepeso u obesidad (Fuente:
+                            ENSANUT)</div>
                     </div>
                     <div class="stat-card" style="border-color: var(--purple);">
-                        <div class="stat-number" style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; font-size: 2.5rem;" onclick="showChart('oms')" title="Haz clic para ver gráfica">Sedentarismo <span style="font-size: 1.5rem; opacity: 0.5;">📊</span></div>
-                        <div class="stat-text">El sedentarismo aumenta riesgo de:<br/>• Diabetes tipo 2<br/>• Enf. cardiovasculares<br/>• Hipertensión<br/><span style="font-size:0.9rem; opacity:0.7;">(Fuente: OMS)</span></div>
+                        <div class="stat-number"
+                            style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; font-size: 2.5rem;"
+                            onclick="showChart('oms')" title="Haz clic para ver gráfica">Sedentarismo <span
+                                style="font-size: 1.5rem; opacity: 0.5;">📊</span></div>
+                        <div class="stat-text">El sedentarismo aumenta riesgo de:<br />• Diabetes tipo 2<br />• Enf.
+                            cardiovasculares<br />• Hipertensión<br /><span
+                                style="font-size:0.9rem; opacity:0.7;">(Fuente: OMS)</span></div>
                     </div>
                 </div>
             </div>
@@ -714,13 +727,15 @@
                     <div class="glass-card" style="width: 250px; text-align: left;">
                         <div style="font-size: 2.5rem; margin-bottom: 15px;">💸</div>
                         <h3 style="margin-bottom: 10px; color: var(--magenta);">Ahorro</h3>
-                        <p style="font-size: 0.9rem; margin: 0;">Entrenador: $200-$800/sesión.<br>Gimnasios: Sin asesoría personal.<br><em>"La personalización está limitada por costos"</em>.</p>
+                        <p style="font-size: 0.9rem; margin: 0;">Entrenador: $200-$800/sesión.<br>Gimnasios: Sin
+                            asesoría personal.<br><em>"La personalización está limitada por costos"</em>.</p>
                     </div>
 
                     <div class="glass-card" style="width: 250px; text-align: left; transform: translateY(-20px);">
                         <div style="font-size: 2.5rem; margin-bottom: 15px;">⚡</div>
                         <h3 style="margin-bottom: 10px; color: var(--magenta);">Respuesta Rápida</h3>
-                        <p style="font-size: 0.9rem; margin: 0;">La API de Gemini responde con rutinas completas en <10s.</p>
+                        <p style="font-size: 0.9rem; margin: 0;">La API de Gemini responde con rutinas completas en
+                            <10s.</p>
                     </div>
 
                     <div class="glass-card" style="width: 250px; text-align: left;">
@@ -860,7 +875,7 @@
             const title = document.getElementById('modalTitle');
             const subtitle = document.getElementById('modalSubtitle');
             const ctx = document.getElementById('modalCanvas').getContext('2d');
-            
+
             // Show modal
             modal.classList.add('active');
 
@@ -933,11 +948,11 @@
                         scales: {
                             y: { display: false }
                         },
-                        plugins: { 
+                        plugins: {
                             legend: { display: false },
                             tooltip: {
                                 callbacks: {
-                                    label: function(context) {
+                                    label: function (context) {
                                         return '+ ' + context.parsed.y + '% Riesgo';
                                     }
                                 }
